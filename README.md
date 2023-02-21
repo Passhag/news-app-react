@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+## Test Plan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### E2E testing
 
-## Available Scripts
+1. Consider using one of the frameworks such as Cypress or Playwright.
+2. Implement automation tests for all possible user scenarios
+3. Integrate the tests into CI pipelines
 
-In the project directory, you can run:
+#### E2E testing scenarios
+
+1. Check that the app loads without errors.
+2. Check that the user is able to see the list of news articles on the homepage.
+3. Check that the user is able to click on a news article and view its details.
+4. Check that the user is able to navigate back to the homepage from the news article details page.
+
+### Other testing scenarios
+
+1. Check that TopNews component renders Timeline component with the latest news.
+2. Check that TopNews component shows the LoadingState while data is fetching.
+3. Check that TopNews component shows the ErrorState when there is an http error.
+4. Check that TopNews component renders the number of news based on screen size.
+5. Check that TopNews component renders the Headline component with correct props.
+6. Check that NewsList component renders the news based on its popularity.
+7. Check that NewsList component shows the LoadingState while data is fetching.
+8. Check that NewsList component shows the ErrorState when there is an http error.
+9. Check that HomePage component hides the TopNews when the screen size is small.
+10. Check that useWindowSize hook updates the state when window is resized.
+
+
+## Possible app improvements
+
+1. Use Design system with customizable theme
+2. Optimize image resources based on user device resoulution, and use webp format
+3. Consider React.Suspense for lazy loading
+4. Consider more scalable architecture (DDD, Clean architecture)
+5. Add localization
+6. Handle empty data scenarios
+7. Setup feature scope boundaries using eslint (improve dependency hierarchy)
+
+## How to use the App
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Runs the app in the development mode.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Builds the app for production to the `build` folder.
