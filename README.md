@@ -30,6 +30,7 @@
 ## Possible app improvements
 
 1. Use Design system with customizable theme
+
 2. Optimize image resources based on user device resoulution, and use webp format
 3. Consider React.Suspense for lazy loading
 4. Consider more scalable architecture (DDD, Clean architecture)
